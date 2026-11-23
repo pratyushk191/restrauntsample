@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kinara, Goan coastal kitchen in Panaji</title>
+  <meta name="description" content="Kinara cooks the day's catch from Betim jetty the Goan way: rava-fried, recheado, or simmered in coconut and kokum. Fontainhas, Panaji.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23F4B41A'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%234A0E27'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23E8791C'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to the menu</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Kinara, back to top">
+      <span class="brand-en">Kinara</span>
+      <span class="brand-dev" lang="kok" aria-hidden="true">किनारा</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="#catch">Today's catch</a>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our story</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-book" href="#book">Book a table</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Kinara">
+      <div class="hero-copy">
+        <p class="open-status" id="open-status" aria-live="polite"></p>
+        <h1>Kinara</h1>
+        <p class="hero-lede">Goan coastal cooking in Fontainhas, Panaji. The fish comes off the boats at Betim jetty each morning and is on your plate by lunch.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#book">Book a table</a>
+          <a class="btn btn-line" href="#menu">See the menu</a>
+        </div>
+      </div>
+
+      <div class="plate-stage">
+        <div class="plate" id="plate" aria-hidden="true"></div>
+      </div>
+
+      <div class="dish-switch" role="group" aria-label="Dishes from the kitchen">
+        <button class="round-btn" type="button" id="dish-prev" aria-label="Previous dish">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="dish-caption" aria-live="polite">
+          <p class="dish-name" id="dish-name"></p>
+          <p class="dish-note" id="dish-note"></p>
+        </div>
+        <button class="round-btn" type="button" id="dish-next" aria-label="Next dish">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Today's catch -->
+    <section class="catch" id="catch">
+      <div class="wrap">
+        <div class="catch-head">
+          <h2 id="catch-title">Landed this morning</h2>
+          <p id="catch-date"></p>
+        </div>
+        <ul class="catch-board" id="catch-board"></ul>
+        <p class="catch-foot">The board changes with the boats. When something sells out, it's gone until tomorrow.</p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <div class="menu-head">
+          <h2>The menu</h2>
+          <label class="veg-toggle">
+            <input type="checkbox" id="veg-only">
+            <span class="switch" aria-hidden="true"></span>
+            <span>Vegetarian only</span>
+          </label>
+        </div>
+        <div class="tabs" id="menu-tabs" role="group" aria-label="Menu sections"></div>
+        <ul class="dishes" id="dishes"></ul>
+        <p class="menu-empty" id="menu-empty" hidden></p>
+        <p class="menu-key">
+          <span class="mark veg" aria-hidden="true"></span> Vegetarian
+          <span class="mark nonveg" aria-hidden="true"></span> Fish, meat or egg
+          <span class="heat" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> Heat, out of three
+        </p>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story" id="story">
+      <div class="wrap story-grid">
+        <div class="story-word" lang="kok" aria-hidden="true">किनारा</div>
+        <div class="story-copy">
+          <h2>Kinara means shore</h2>
+          <p>Maria Fernandes grew up watching her grandmother grind recheado masala on a stone behind the house in Betim. The recipe is the same one we use now: Kashmiri chillies, garlic, cumin and toddy vinegar, with nothing from a jar.</p>
+          <p>We opened in 2016 in a hundred-year-old house on Rua de Ourém. There are fourteen tables, a wood fire for the poee, and a kitchen that buys only what the boats bring in. If the mackerel didn't run, it isn't on the menu.</p>
+          <p class="story-sign">Maria Fernandes and Anton D'Souza, owners</p>
+        </div>
+      </div>
+      <div class="wrap quotes">
+        <figure>
+          <blockquote>The crab xec xec is the reason I extend every Goa trip by a day.</blockquote>
+          <figcaption>Rhea Kamat, Mumbai</figcaption>
+        </figure>
+        <figure>
+          <blockquote>Fish curry rice the way my aunt makes it. I didn't expect that from a restaurant.</blockquote>
+          <figcaption>Savio Pinto, Margao</figcaption>
+        </figure>
+        <figure>
+          <blockquote>We asked what was good and they walked us to the board. Ordered everything on it.</blockquote>
+          <figcaption>Hannah Berg, Stockholm</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="book" id="book">
+      <div class="wrap book-grid">
+        <div class="book-intro">
+          <h2>Book a table</h2>
+          <p>Lunch from 12 to 3.30, dinner from 7 to 11. We're closed on Mondays. For nine or more, call us on <a href="tel:+918325550142">0832 555 0142</a> and we'll set up the long table in the courtyard.</p>
+        </div>
+
+        <form class="book-form" id="book-form" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="book-date">Date</label>
+              <input type="date" id="book-date" name="date" required>
+            </div>
+            <div class="field">
+              <span class="label" id="guests-label">Guests</span>
+              <div class="stepper" role="group" aria-labelledby="guests-label">
+                <button type="button" id="guests-less" aria-label="Fewer guests">−</button>
+                <output id="guests-count" aria-live="polite">2</output>
+                <button type="button" id="guests-more" aria-label="More guests">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label" id="slots-label">Time</span>
+            <div class="slots" id="slots" role="group" aria-labelledby="slots-label"></div>
+            <p class="slots-note" id="slots-note"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="book-name">Name</label>
+              <input type="text" id="book-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="book-phone">Phone</label>
+              <input type="tel" id="book-phone" name="phone" autocomplete="tel" inputmode="tel" required>
+            </div>
+          </div>
+
+          <p class="form-error" id="book-error" role="alert" hidden></p>
+          <button class="btn btn-dark" type="submit">Book table</button>
+        </form>
+
+        <div class="book-done" id="book-done" hidden tabindex="-1">
+          <h3>Table booked</h3>
+          <dl id="book-summary"></dl>
+          <p>We hold tables for 15 minutes. If your plans change, call 0832 555 0142.</p>
+          <button class="btn btn-line-dark" type="button" id="book-again">Change booking</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="visit" id="visit">
+      <div class="wrap visit-grid">
+        <div>
+          <h2>Find us</h2>
+          <address>
+            Rua de Ourém 14, Fontainhas<br>
+            Panaji, Goa 403001
+          </address>
+          <p class="visit-how">Five minutes on foot from the Panaji ferry. Look for the yellow house with the blue door, across from the creek.</p>
+          <p class="visit-contact">
+            <a href="tel:+918325550142">0832 555 0142</a><br>
+            <a href="mailto:hello@kinara.example">hello@kinara.example</a>
+          </p>
+          <table class="hours" id="hours">
+            <caption>Opening hours</caption>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="map" role="img" aria-label="Map showing Kinara on Rua de Ourém in Fontainhas, beside Ourém creek and south of the Mandovi river">
+          <svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="600" height="520" fill="#F3E6C4"/>
+            <!-- Mandovi -->
+            <path d="M0 0H600V95C500 120 420 80 320 100S120 130 0 105Z" fill="#0E4A4F"/>
+            <path d="M40 40q20-10 40 0t40 0M470 70q20-10 40 0t40 0" fill="none" stroke="#FFF6E0" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+            <!-- creek -->
+            <path d="M450 96C470 180 430 260 455 340S500 460 480 520H520C540 460 495 400 490 330S505 180 490 100Z" fill="#0E4A4F"/>
+            <!-- blocks -->
+            <g fill="#E7D4A3">
+              <rect x="30" y="150" width="120" height="90" rx="6"/>
+              <rect x="170" y="140" width="110" height="100" rx="6"/>
+              <rect x="300" y="135" width="120" height="105" rx="6"/>
+              <rect x="30" y="265" width="150" height="100" rx="6"/>
+              <rect x="200" y="265" width="90" height="100" rx="6"/>
+              <rect x="310" y="265" width="110" height="100" rx="6"/>
+              <rect x="30" y="390" width="110" height="110" rx="6"/>
+              <rect x="160" y="390" width="130" height="110" rx="6"/>
+              <rect x="310" y="390" width="120" height="110" rx="6"/>
+            </g>
+            <!-- park -->
+            <rect x="200" y="265" width="90" height="100" rx="6" fill="#2F6B3F" fill-opacity=".55"/>
+            <!-- ferry -->
+            <path d="M150 104v26" stroke="#4A0E27" stroke-width="4" stroke-dasharray="3 6" stroke-linecap="round"/>
+            <circle cx="150" cy="134" r="7" fill="#4A0E27"/>
+            <text x="166" y="140" font-family="Figtree, sans-serif" font-size="15" font-weight="600" fill="#4A0E27">Ferry</text>
+            <text x="250" y="62" font-family="Figtree, sans-serif" font-size="17" font-weight="600" fill="#FFF6E0">Mandovi river</text>
+            <text x="436" y="300" font-family="Figtree, sans-serif" font-size="15" font-weight="600" fill="#4A0E27" transform="rotate(-84 436 300)">Rua de Ourém</text>
+            <!-- pin -->
+            <g transform="translate(408 318)">
+              <circle r="30" fill="#F4B41A" fill-opacity=".45"/>
+              <circle r="14" fill="#C8321F" stroke="#FFF6E0" stroke-width="4"/>
+            </g>
+            <g transform="translate(250 306)">
+              <rect x="0" y="0" width="118" height="40" rx="20" fill="#4A0E27"/>
+              <text x="59" y="27" text-anchor="middle" font-family="'Rozha One', serif" font-size="22" fill="#F4B41A">Kinara</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p class="footer-brand">Kinara <span lang="kok" aria-hidden="true">किनारा</span></p>
+      <p>Rua de Ourém 14, Fontainhas, Panaji<br>Tuesday to Sunday, lunch and dinner</p>
+      <p class="footer-note">Kinara is a concept restaurant made for a design portfolio. The menu, people and bookings are fictional.</p>
+    </div>
+  </footer>
+
+  <!-- Order tray -->
+  <button class="tray-btn" id="tray-btn" type="button" hidden>
+    <span>Your order</span>
+    <span class="tray-count" id="tray-count">0</span>
+    <span id="tray-total">₹0</span>
+  </button>
+
+  <dialog class="tray" id="tray" aria-labelledby="tray-title">
+    <div class="tray-inner">
+      <div class="tray-top">
+        <h2 id="tray-title">Your order</h2>
+        <button class="round-btn small" type="button" id="tray-close" aria-label="Close order">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div id="tray-body"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
