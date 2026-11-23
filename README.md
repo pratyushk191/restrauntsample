@@ -1,2 +1,2 @@
 # restrauntsample
-a simple restraubt website
+a simple restraunt website
